@@ -1,0 +1,5 @@
+* dotEmacs-defaultKeyBind.el
+  - Uses Melpa packages
+  - Uses a minimal number of packages
+  - Uses standard emacs keybindings
+  - Fast start up
