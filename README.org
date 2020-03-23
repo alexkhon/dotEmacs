@@ -1,3 +1,7 @@
+* Prereq
+  1. $HOME/Config
+     -  bin scripts will assume they are working from this directory
+
 * dotEmacs-defaultKeyBind.el
   - Uses Melpa packages
   - Uses a minimal number of packages
