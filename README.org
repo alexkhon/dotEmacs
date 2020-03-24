@@ -1,9 +1,20 @@
 * Prereq
   1. $HOME/Config
-     -  bin scripts will assume they are working from this directory
-
-* dotEmacs-defaultKeyBind.el
-  - Uses Melpa packages
-  - Uses a minimal number of packages
-  - Uses standard emacs keybindings
-  - Fast start up
+     - bin scripts will assume they are working from this directory
+     
+* Version 1.0.0
+** dotEmacs-defaultKeyBind.el
+- Uses Melpa packages
+- Uses a minimal number of packages
+- Uses standard emacs keybindings
+- Fast start up
+  
+* Version 1.1.0
+** dotEmacs-defaultKeyBind.el (bootstrap)
+- Uses Melpa packages
+- Uses a minimal number of packages
+- Uses standard emacs keybindings
+- Fast start up
+- References Org files to install and configure major packages
+  - dotEmacs-defaultKeyBind/basePackages.org
+  - dotEmacs-defaultKeyBind/orgMode.org

@@ -1,0 +1,70 @@
+* Start org-files 
+#+BEGIN_SRC emacs-lisp
+(setq org-startup-folded nil)
+(setq org-startup-indented 't)
+#+END_SRC
+
+* Set the root of the agenda files
+#+BEGIN_SRC emacs-lisp
+(load-library "find-lisp")
+(add-hook 'org-agenda-mode-hook
+	  (lambda ()
+	    (setq org-agenda-files (find-lisp-find-files
+				    "~/Dropbox/Journal"
+				    "\\.org$"))))
+#+END_SRC
+  
+* Tags
+#+BEGIN_SRC emacs-lisp
+(setq org-tag-alist '(("EXPENSE" . ?e)
+		      ("MOOD" . ?m)
+		      ("HEALTH" . ?h)
+		      ("IDEA" . ?i)
+		      ("FOLLOWUP" . ?f)
+		      ("KATIE" . ?k)
+		      ("CAROL" . ?c)
+		      ("SUMMARY" . ?s)
+		      ("BPCP" . ?p)
+		      ("X220" . ?x)
+		      ))
+
+#+END_SRC
+
+* Todo Cycle
+#+BEGIN_SRC emacs-lisp
+(setq org-todo-keywords
+      '((sequence "TODO(t!)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+#+END_SRC
+
+* Log into drawer
+  This setting causes the todo timestamps to be inside :LOGBOOK:
+#+BEGIN_SRC emacs-lisp
+(setq org-log-into-drawer 't)
+#+END_SRC
+
+* Capture
+** Capture file 
+ #+BEGIN_SRC emacs-lisp
+(setq org-log-into-drawer 't)
+ #+END_SRC
+** Start org-files 
+ #+BEGIN_SRC emacs-lisp
+(setq org-capture-templates
+  (quote (("t" "todo" entry (file+olp+datetree
+    "~/Dropbox/Journal/Personal/capture.org")
+    "* TODO  %?\n- Created %U\n")
+    ("n" "note" entry (file+olp+datetree
+      "~/Dropbox/Journal/Personal/capture.org")
+      "* %? :NOTE:\n" :clock-in t :clock-resume t)
+)))
+ #+END_SRC
+
+
+* Export 
+** Don't export _ and ^ as super and sub scripts
+#+BEGIN_SRC emacs-lisp
+(setq org-export-with-sub-superscripts nil)
+#+END_SRC
+
+
+
