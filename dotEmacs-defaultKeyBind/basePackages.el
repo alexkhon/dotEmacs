@@ -20,7 +20,7 @@
 
 (use-package avy
   :ensure t
-  :bind ("M-s" . avy-goto-char))
+  :bind ("M-s" . avy-goto-char-2))
 
 (use-package ivy
   :ensure t

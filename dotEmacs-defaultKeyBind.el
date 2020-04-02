@@ -34,13 +34,17 @@
 ;; Load and configure packages
 ;; ============================================
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/basePackages.org"))
+(org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/convenienceFeatures.org")
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/orgMode.org"))
-
 
 ;; ============================================
 ;; Aliases
 ;; ============================================
 (defalias 'list-buffers 'ibuffer)
+
+
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
 
 ;; ============================================
 ;; Centralized back up

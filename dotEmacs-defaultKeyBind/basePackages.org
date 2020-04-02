@@ -1,33 +1,32 @@
-* User Interface Packages
-** Package: try
-    Allows you to try a package without installing
-*** Usage
-    M-x try
-*** Code
-    #+BEGIN_SRC emacs-lisp
+* Package: try
+Allows you to try a package without installing
+** Usage
+M-x try
+** Code
+#+BEGIN_SRC emacs-lisp
 (use-package try
   :ensure t)
-    #+END_SRC
-** Package: which-key
-*** Purpose
-    Upon hitting C-x, a list of possible command shows
-*** Usage
-    C-x
-    M-x
-    <ESC>
-*** Code
+#+END_SRC
+
+* Package: which-key
+Upon hitting C-x, a list of possible command shows
+** Usage
+C-x
+M-x
+<ESC>
+** Code
     #+BEGIN_SRC emacs-lisp
 (use-package which-key
   :ensure t
   :config (which-key-mode))
     #+END_SRC
-** Package: ace-window
-*** Purpose
-    Easier window navigation
-*** Usage
-    C-x o 
-*** Code
-    #+BEGIN_SRC emacs-lisp
+
+* Package: ace-window
+Easier window navigation
+** Usage
+C-x o 
+** Code
+#+BEGIN_SRC emacs-lisp
 (use-package ace-window
   :ensure t
   :init
@@ -39,29 +38,29 @@
     ;;     '(aw-leading-char-face
     ;;       ((t (:inherit ace-jump-face-foreground :height 3.0)))))
 ))
-    #+END_SRC
-** Package: avy 
-*** Purpose
-    Location jumping similar to a package in vim
-*** Usage
-    M-s {one_chars}
-*** Code
-    #+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+* Package: avy 
+Location jumping similar to a package in vim
+** Usage
+M-s {one_chars}
+** Code
+#+BEGIN_SRC emacs-lisp
 (use-package avy
   :ensure t
-  :bind ("M-s" . avy-goto-char))
-    #+END_SRC
-** Package: swiper / council / ivy
-*** Purpose
-    Improve naviagtion via jump-by-searching
-*** Usage
-    C-x b	switch buffer using ivy
-    C-s		swiper search
-    C-r		swiper search
-    M-x		emacs command using council
-    C-x C-f	find-file using council
-*** Code
-    #+BEGIN_SRC emacs-lisp
+  :bind ("M-s" . avy-goto-char-2))
+#+END_SRC
+
+* Package: swiper / council / ivy
+Improve naviagtion via jump-by-searching
+** Usage
+ C-x b	switch buffer using ivy
+ C-s		swiper search
+ C-r		swiper search
+ M-x		emacs command using council
+ C-x C-f	find-file using council
+** Code
+#+BEGIN_SRC emacs-lisp
 (use-package ivy
   :ensure t
   :diminish (ivy-mode)
@@ -91,7 +90,7 @@
     ;; (setq enable-recursive-minibuffers t)
     (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
     ))
-    #+END_SRC
+#+END_SRC
 
 
 

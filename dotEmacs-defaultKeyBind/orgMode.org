@@ -1,7 +1,19 @@
+* Use org-mode auto-complete
+- Depends on auto-complete
+#+BEGIN_SRC emacs-lisp
+(use-package org-ac
+  :ensure t
+  :config
+  (progn
+    (org-ac/config-default)
+  ))
+#+END_SRC
+
 * Start org-files 
 #+BEGIN_SRC emacs-lisp
 (setq org-startup-folded nil)
 (setq org-startup-indented 't)
+(setq hide-leading-stars 't)
 #+END_SRC
 
 * Set the root of the agenda files
