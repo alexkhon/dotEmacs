@@ -1,0 +1,50 @@
+* Package: auto-complete
+- Auto-complete with drop down selection
+- To use with org-mode, the package org-ac is installed in the orgMode.org file
+** Usage
+Select with arrow keys and TAB to select
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package auto-complete
+  :ensure t
+  :config
+  (progn
+    (ac-config-default)
+    (global-auto-complete-mode t)))
+#+END_SRC
+
+* Package: yasnippet
+** Usage
+- Fix: There is no reason to turn on yasnippet if your major mode has no snippets
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package yasnippet
+  :ensure t
+  :config
+    (yas-global-mode 1))
+#+END_SRC
+
+* Package: undo tree
+This should be in the basePackage
+** Usage
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package undo-tree
+  :ensure t
+  :config
+    (global-undo-tree-mode))
+#+END_SRC
+
+* Package: smartparens
+** Usage
+- M-x smartparens-mode
+- add a hook: (add-hook 'js-mode-hook #'smartparens-mode)
+- Just type the parens
+- You can also wrap an active region with parenthesis
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package smartparens
+  :ensure t
+  :config
+    (require 'smartparens-config))
+#+END_SRC

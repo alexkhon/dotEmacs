@@ -1,6 +1,14 @@
 
+(use-package org-ac
+  :ensure t
+  :config
+  (progn
+    (org-ac/config-default)
+  ))
+
 (setq org-startup-folded nil)
 (setq org-startup-indented 't)
+(setq hide-leading-stars 't)
 
 (load-library "find-lisp")
 (add-hook 'org-agenda-mode-hook

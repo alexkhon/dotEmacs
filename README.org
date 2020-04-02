@@ -9,7 +9,7 @@
 - Uses standard emacs keybindings
 - Fast start up
   
-* Version 1.1.0
+* Version 1.1.0 - Org-mode and Literate .emacs
 ** dotEmacs-defaultKeyBind.el (bootstrap)
 - Uses Melpa packages
 - Uses a minimal number of packages
@@ -18,3 +18,12 @@
 - References Org files to install and configure major packages
   - dotEmacs-defaultKeyBind/basePackages.org
   - dotEmacs-defaultKeyBind/orgMode.org
+
+* Version 1.2.0 - Features that may facilitate the use of emacs
+** dotEmacs-defaultKeyBind.el (bootstrap)
+*** dotEmacs-defaultKeyBind/basePackages.org
+- Packages that are always going to be needed
+*** dotEmacs-defaultKeyBind/orgMode.org
+- org-mode specific configurations
+*** dotEmacs-defaultKeyBind/convenienceFeatures.org
+- packages are are not necessary but may facilitate the use of emacs
