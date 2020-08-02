@@ -34,5 +34,9 @@
 - Added a call to themes.org
 - Added a call to experimental.org
 *** dotEmacs-defaultKeyBind/experimental.org 
- - modules added for try out
- - Added emacs-surround
+- modules added for try out
+- Added emacs-surround
+*** dotEmacs-defaultKeyBind/orgMode.org
+- Removed org-mode auto-complete
+*** dotEmacs-defaultKeyBind/convenienceFeatures.org
+- Remoged auto-complete
