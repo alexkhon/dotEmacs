@@ -12,3 +12,19 @@ Usage
 (global-set-key (kbd "C-q") 'emacs-surround)
 #+END_SRC
 
+* Package: sr-speedbar
+
+** Notes
+- https://www.reddit.com/r/emacs/comments/6vxxp5/how_can_i_change_srspeedbar_to_open_on_the_left/
+** Usage
+
+** Code
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar")
+(require 'sr-speedbar)
+(setq speedbar-use-images nil)
+(setq sr-speedbar-right-side nil)
+(setq sr-speedbar-width 35)
+(setq sr-speedbar-max-width 35)
+(global-set-key (kbd "C-x e") 'sr-speedbar-toggle)
+#+END_SRC
