@@ -1,0 +1,7 @@
+* Package: nord-emacs
+** Usage
+** Code
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/nord-emacs"))
+(load-theme 'nord t)
+#+END_SRC

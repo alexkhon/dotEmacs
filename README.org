@@ -27,3 +27,8 @@
 - org-mode specific configurations
 *** dotEmacs-defaultKeyBind/convenienceFeatures.org
 - packages are are not necessary but may facilitate the use of emacs
+
+* Version 1.3.0
+** dotEmacs-defaultKeyBind.el (bootstrap)
+- Fixed: (defalias 'yes-or-no-p 'y-or-n-p)
+- Added a call to themes.org

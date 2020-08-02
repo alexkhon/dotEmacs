@@ -11,6 +11,7 @@
       (scroll-bar-mode -1)))
 
 ;; Simplfy the yes-no response
+(defalias 'yes-or-no-p 'y-or-n-p)
 ;;(fset yes-or-no-p 'y-or-n-p)
 
 ;; ============================================
@@ -36,6 +37,8 @@
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/basePackages.org"))
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/convenienceFeatures.org"))
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/orgMode.org"))
+
+(org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/themes.org"))
 
 ;; ============================================
 ;; Aliases
