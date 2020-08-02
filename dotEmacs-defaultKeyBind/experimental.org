@@ -8,9 +8,9 @@ Usage
 ** Code
 #+BEGIN_SRC emacs-lisp
 (when (eq system-type 'darwin) 
-  (add-to-list 'load-path "/Users/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
-(if (eq system-type 'gnu/linux)
-  (add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
+  (add-to-list 'load-path "/Users/alex/Config/dotEmacs/dotEmacsDir/experimental/emacs-surround"))
+(when (eq system-type 'gnu/linux)
+  (add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/emacs-surround"))
 
 (require 'emacs-surround)
 (global-set-key (kbd "C-q") 'emacs-surround)
@@ -25,7 +25,7 @@ C-x e sr-speedbar-toggle
 #+BEGIN_SRC emacs-lisp
 (when (eq system-type 'darwin) 
   (add-to-list 'load-path "/Users/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
-(if (eq system-type 'gnu/linux)
+(when (eq system-type 'gnu/linux)
   (add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
 
 (require 'sr-speedbar)
@@ -34,4 +34,13 @@ C-x e sr-speedbar-toggle
 (setq sr-speedbar-width 35)
 (setq sr-speedbar-max-width 35)
 (global-set-key (kbd "C-x e") 'sr-speedbar-toggle)
+#+END_SRC
+
+* Package: linum-mode
+** Notes
+- Should try to hook this mode to specific modes
+** Code
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook (lambda () (linum-mode 1)))
+(setq linum-format "%4d \u2502 ")
 #+END_SRC

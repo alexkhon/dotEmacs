@@ -19,7 +19,7 @@
   ;; C-x C-+ increase font size
   ;; C-x C-0 default size
   ;; C-x C-- decrease font size
-  (setq default-frame-alist '((font . "Menlo-14")))
+  (setq default-frame-alist '((font . "Menlo-15")))
 )
  
 
