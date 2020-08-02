@@ -1,12 +1,12 @@
 * Use org-mode auto-complete
 - Depends on auto-complete
 #+BEGIN_SRC emacs-lisp
-(use-package org-ac
-  :ensure t
-  :config
-  (progn
-    (org-ac/config-default)
-  ))
+;(use-package org-ac
+;  :ensure t
+;  :config
+;  (progn
+;    (org-ac/config-default)
+;  ))
 #+END_SRC
 
 * Start org-files 

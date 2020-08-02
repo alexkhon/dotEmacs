@@ -32,3 +32,7 @@
 ** dotEmacs-defaultKeyBind.el (bootstrap)
 - Fixed: (defalias 'yes-or-no-p 'y-or-n-p)
 - Added a call to themes.org
+- Added a call to experimental.org
+*** dotEmacs-defaultKeyBind/experimental.org 
+ - modules added for try out
+ - Added emacs-surround

@@ -5,12 +5,12 @@
 Select with arrow keys and TAB to select
 ** Code
 #+BEGIN_SRC emacs-lisp
-(use-package auto-complete
-  :ensure t
-  :config
-  (progn
-    (ac-config-default)
-    (global-auto-complete-mode t)))
+;(use-package auto-complete
+;  :ensure t
+;  :config
+;  (progn
+;    (ac-config-default)
+;    (global-auto-complete-mode t)))
 #+END_SRC
 
 * Package: yasnippet
