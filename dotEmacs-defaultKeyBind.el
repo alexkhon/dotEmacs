@@ -34,7 +34,7 @@
 ;; Load and configure packages
 ;; ============================================
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/basePackages.org"))
-(org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/convenienceFeatures.org")
+(org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/convenienceFeatures.org"))
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/orgMode.org"))
 
 ;; ============================================
