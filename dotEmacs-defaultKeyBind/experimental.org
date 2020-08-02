@@ -7,20 +7,27 @@ Usage
       delete surround: C-q d{symbol}
 ** Code
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/emacs-surround")
+(when (eq system-type 'darwin) 
+  (add-to-list 'load-path "/Users/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
+(if (eq system-type 'gnu/linux)
+  (add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
+
 (require 'emacs-surround)
 (global-set-key (kbd "C-q") 'emacs-surround)
 #+END_SRC
 
 * Package: sr-speedbar
-
 ** Notes
 - https://www.reddit.com/r/emacs/comments/6vxxp5/how_can_i_change_srspeedbar_to_open_on_the_left/
 ** Usage
-
+C-x e sr-speedbar-toggle
 ** Code
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar")
+(when (eq system-type 'darwin) 
+  (add-to-list 'load-path "/Users/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
+(if (eq system-type 'gnu/linux)
+  (add-to-list 'load-path "/home/alex/Config/dotEmacs/dotEmacsDir/experimental/sr-speedbar"))
+
 (require 'sr-speedbar)
 (setq speedbar-use-images nil)
 (setq sr-speedbar-right-side nil)

@@ -10,6 +10,19 @@
       (tool-bar-mode -1)
       (scroll-bar-mode -1)))
 
+;; key bindings
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-key-is-meta t)
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-key-is-meta nil)
+  (setq mac-command-modifier nil)
+  ;; C-x C-+ increase font size
+  ;; C-x C-0 default size
+  ;; C-x C-- decrease font size
+  (setq default-frame-alist '((font . "Menlo-14")))
+)
+ 
+
 ;; Simplfy the yes-no response
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;(fset yes-or-no-p 'y-or-n-p)
