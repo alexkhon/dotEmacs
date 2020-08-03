@@ -1,4 +1,6 @@
 * Package: emacs-surround
+** Notes
+- This should be in the convenience tools set
 ** Usage
 https://github.com/ganmacs/emacs-surround
 Usage
@@ -19,6 +21,7 @@ Usage
 * Package: sr-speedbar
 ** Notes
 - https://www.reddit.com/r/emacs/comments/6vxxp5/how_can_i_change_srspeedbar_to_open_on_the_left/
+- This should have it's own file
 ** Usage
 C-x e sr-speedbar-toggle
 ** Code
@@ -39,8 +42,17 @@ C-x e sr-speedbar-toggle
 * Package: linum-mode
 ** Notes
 - Should try to hook this mode to specific modes
+- The hooks should go into their own files; e.g. org-mode hooks should go into the org-mode file
 ** Code
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook (lambda () (linum-mode 1)))
 (setq linum-format "%4d \u2502 ")
+#+END_SRC
+
+* Package: hl-line-mode
+** Notes
+- The hooks should go into their own files; e.g. org-mode hooks should go into the org-mode file
+** Code
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook 'hl-line-mode)
 #+END_SRC

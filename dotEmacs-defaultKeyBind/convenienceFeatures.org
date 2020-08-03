@@ -48,3 +48,14 @@ This should be in the basePackage
   :config
     (require 'smartparens-config))
 #+END_SRC
+
+* Package:beacon
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package beacon
+  :ensure t
+  :config
+    (setq beacon-blink-duration 0.1)
+    (setq beacon-blink-delay 0.1)
+    (beacon-mode 1))
+#+END_SRC
