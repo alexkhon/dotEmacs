@@ -55,7 +55,40 @@ This should be in the basePackage
 (use-package beacon
   :ensure t
   :config
-    (setq beacon-blink-duration 0.1)
+    (setq beacon-blink-duration 0.25)
     (setq beacon-blink-delay 0.1)
     (beacon-mode 1))
 #+END_SRC
+
+* Package: expand-region
+** Notes
+This is to mimick the vim inside and around delimiters function
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package expand-region
+  :ensure t
+  :config
+    (global-set-key (kbd "C-=") 'er/expand-region))
+#+END_SRC
+
+* Package: linum-relative
+** Notes
+This mode does not play well with org-mode.
+In org-mode, relative numbering only works if the tree is fully expanded
+** Usage
+To turn on and off: M-x linum-relative-toggle
+Jumping in GUI
+  To jump up   : C-{some number} C-p 
+  To jump down : C-{some number} C-n
+Jumping in Text mode
+  To jump up   : M-u {some number} C-p 
+  To jump down : M-u{some number} C-n
+** Code
+#+BEGIN_SRC emacs-lisp
+(use-package linum-relative
+  :ensure t
+  :config
+    (require 'linum-relative))
+#+END_SRC
+
+

@@ -56,3 +56,9 @@ C-x e sr-speedbar-toggle
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'hl-line-mode)
 #+END_SRC
+
+* Convenient Key mappings
+** Code
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC

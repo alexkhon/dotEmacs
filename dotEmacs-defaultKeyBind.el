@@ -1,7 +1,7 @@
 ;; https://www.youtube.com/watch?v=49kBWM3RQQ8
 
 ;; ============================================
-;; Minimail startup
+;; Minimal startup
 ;; ============================================
 (setq inhibit-startup-message t)
 (menu-bar-mode -1)
@@ -10,7 +10,9 @@
       (tool-bar-mode -1)
       (scroll-bar-mode -1)))
 
-;; key bindings
+;; ============================================
+;; OS dependent key bindings
+;; ============================================
 (when (eq system-type 'darwin) ;; mac specific settings
   (setq mac-option-key-is-meta t)
   (setq mac-option-modifier 'meta)
@@ -21,11 +23,6 @@
   ;; C-x C-- decrease font size
   (setq default-frame-alist '((font . "Menlo-15")))
 )
- 
-
-;; Simplfy the yes-no response
-(defalias 'yes-or-no-p 'y-or-n-p)
-;;(fset yes-or-no-p 'y-or-n-p)
 
 ;; ============================================
 ;; Set emacs to use Melpa
@@ -54,13 +51,29 @@
 
 (org-babel-load-file (expand-file-name "~/Config/dotEmacs/dotEmacs-defaultKeyBind/experimental.org"))
 
+
+
+;; ============================================
+;; User Interface
+;; ============================================
+;; Turn off sound
+(setq visible-bell t)
+(setq ring-bell-function 'ignore)
+
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
+
 ;; ============================================
 ;; Aliases
 ;; ============================================
 (defalias 'list-buffers 'ibuffer)
 
+;; Simplfy the yes-no response
+(defalias 'yes-or-no-p 'y-or-n-p)
 
-(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+(defalias 'hsplit 'split-window-below)
+(defalias 'vsplit 'split-window-right)
+
 
 
 ;; ============================================
