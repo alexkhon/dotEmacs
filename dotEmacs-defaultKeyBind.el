@@ -14,14 +14,62 @@
 ;; OS dependent key bindings
 ;; ============================================
 (when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-option-key-is-meta t)
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-key-is-meta nil)
-  (setq mac-command-modifier nil)
+  ;; (setq mac-option-key-is-meta t)
+  ;; (setq mac-option-modifier 'meta)
+  ;; (setq mac-command-key-is-meta nil)
+  ;; (setq mac-command-modifier nil)
+
+
+  ;; http://ergoemacs.org/emacs/emacs_hyper_super_keys.html
+  ;; ------------------------------------------
+  ;; set keys for Apple keyboard, for emacs in OS X
+  (setq mac-command-modifier 'super) ; make cmd key do Meta
+  (setq mac-option-modifier 'meta) ; make opt key do Super
+  (setq mac-control-modifier 'control) ; make Control key do Control
+  (setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
+  ;; .........................................
+  ;; Mapping Commonly used OSX Quick Keys
+  (global-set-key (kbd "s-z") 'undo-tree-visualize)
+  (global-set-key (kbd "s-x") 'kill-region)
+  (global-set-key (kbd "s-c") 'kill-ring-save)
+  (global-set-key (kbd "s-v") 'yank)
+  (global-set-key (kbd "s-V") 'yank-pop)
+  ;; .........................................
+  (global-set-key (kbd "s-s") 'save-buffer)
+  (global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
+  ;; .........................................
+  (global-set-key (kbd "s-=") 'text-scale-increase)
+  (global-set-key (kbd "s--") 'text-scale-decrease)
+  ;; .........................................
+  (global-set-key (kbd "s-<left>")  'previous-buffer)
+  (global-set-key (kbd "s-<right>") 'next-buffer)
+
+  ;; .........................................
+  ;; esc always quits
+  ;; https://superuser.com/questions/669902/is-it-possible-to-get-esc-to-behave-as-an-actual-escape-key/945245#945245
+  (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+  (define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+  (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+  (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+  (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+  ;; (global-set-key [escape] 'keyboard-quit)
+  (global-set-key [escape] 'keyboard-escape-quit)
+
+  ;; .........................................
+  ;; The following are my vim Leader commands
+  (global-set-key (kbd "s-\\") 'toggle-truncate-lines)
+  (global-set-key (kbd "s-e")  'treemacs)
+  (global-set-key (kbd "s-l")  'whitespace-mode)
+
+  ;; .........................................
+  ;; Mode specific keybindings
+  (add-hook 'org-mode-hook
+          (lambda () (local-set-key (kbd "s-p") 'org-export-dispatch)))
+  
   ;; C-x C-+ increase font size
   ;; C-x C-0 default size
   ;; C-x C-- decrease font size
-  (setq default-frame-alist '((font . "Menlo-15")))
+  (setq default-frame-alist '((font . "Menlo-16")))
 )
 
 ;; ============================================
